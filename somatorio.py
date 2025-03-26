@@ -1,13 +1,16 @@
 print('Hello ADS 2025.1')
 print('--------------------')
-print('>>>>> Soma de 1 até N <<<<')
+print('>>>>> Soma de N até M <<<<')
 
 # entrada
-limite = int(input('Limite Superior: '))
+limite_inferior = int(input('Limite Inferior: '))
+limite_superior = int(input('Limite Superior: '))
 
 # processamento
-soma_par = limite + 1
-quantidade_pares = limite / 2
+soma_par = limite_inferior + limite_superior
+
+quantidade_pares = (limite_superior - limite_inferior + 1) / 2
+
 somatorio = soma_par * quantidade_pares
 
 # saída
