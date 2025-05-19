@@ -1,0 +1,9 @@
+def("o nome do animal")
+
+input("animal elefante")
+
+input ("possui mais 7 letras)
+
+else("o número é primo)
+
+print("qual média dos números")

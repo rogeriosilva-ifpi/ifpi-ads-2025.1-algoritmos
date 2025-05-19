@@ -1,0 +1,1 @@
+from q3_float_utils import obter_real,obter_real_min
