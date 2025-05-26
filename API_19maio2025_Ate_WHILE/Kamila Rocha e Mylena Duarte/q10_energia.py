@@ -31,6 +31,7 @@ def main():
             tarifa_iluminacao = (valor_fatura / (3/100))
         else:
             tarifa_iluminacao = 0
+        
         saida += f'\nTarifa iluminação: {tarifa_iluminacao}'
 
         ICMS = (valor_fatura / 25) * 100
@@ -40,7 +41,8 @@ def main():
 
         total_pagar = valor_fatura + tarifa_iluminacao + ICMS + PIS_confins
         saida += f'\ntotal a pagar: {total_pagar:.2f}'
-        print(saida)
+        
+    print(saida)
 
 
 main()

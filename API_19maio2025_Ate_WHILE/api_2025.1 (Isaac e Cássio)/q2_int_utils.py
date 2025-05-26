@@ -14,6 +14,7 @@ def obter_numero_inteiro_positivo(label: str):
         return numero
     else:
         print(f'O valor deve ser positivo!')
+        # faltou return
         obter_numero_inteiro_min(label)
 
 
@@ -42,4 +43,5 @@ def obter_numero_inteiro_min_max(label: str, min_value: int, max_value: int):
 
     if numero < min_value or numero > max_value:
         print(f'O valor deve estar entre {min_value} e {max_value}!')
+        # faltou return
         obter_numero_inteiro_min_max(label, min_value, max_value)

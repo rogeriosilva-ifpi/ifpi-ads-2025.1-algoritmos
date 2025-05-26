@@ -24,7 +24,7 @@ def calcula_mdc(n_1, n_2):
                 mdc = subtracao
                 break
             
-    
+    # faltou retornar
     print(F'O MDC de {maior} e {menor} é {mdc}')
 
 

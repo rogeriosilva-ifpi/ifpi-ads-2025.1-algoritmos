@@ -1,4 +1,5 @@
 def main():
+    # Inválida por usar recursos nao estudados até o momento
     print(calculo_com_nome("dois"))
     print(calculo_com_nome("cinco"))
 

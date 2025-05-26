@@ -1,4 +1,5 @@
 def main():
+    # Funcao dentro de funcao
 
     def receber_inteiro():
         while True:

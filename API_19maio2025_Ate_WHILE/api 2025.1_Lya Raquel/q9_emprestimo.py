@@ -1,3 +1,4 @@
+# bem confuso..
 def main():
     renda = float(input('Renda mensal: '))
     emprestimo = float(input('Valor do empréstimo: '))

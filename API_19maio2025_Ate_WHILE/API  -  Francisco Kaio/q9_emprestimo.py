@@ -10,6 +10,8 @@ def simular_emprestimo():
     valor = float(input("Digite o valor desejado de empréstimo: "))
     parcelas = int(input("Quantas parecelas desejas (Min:2, Max:24): "))
     
+    # faltou validar as entradas
+    # limite de 30% é da parcela e não do empréstimo
     if parcelas < 2 or parcelas > 24:
         print ("Número de parcelas inválidos")
         
@@ -37,3 +39,5 @@ def simular_emprestimo():
         print ("Empréstimo NEGADO")
         
 simular_emprestimo()
+
+# Faltou funcao MAIN

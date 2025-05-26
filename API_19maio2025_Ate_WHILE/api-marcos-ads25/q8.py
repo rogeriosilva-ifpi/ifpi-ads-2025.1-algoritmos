@@ -1,4 +1,5 @@
 def verificar_num_perfeitos(n):
+    # uso de recurso não estudado []
 
     divisores = []
     ii = 0

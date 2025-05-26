@@ -1,3 +1,4 @@
+# recursos inválidos
 def e_perfeito(n):
     soma = sum([i for i in range(1, n) if n % i == 0])
     return soma

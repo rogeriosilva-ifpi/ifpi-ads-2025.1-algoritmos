@@ -1,10 +1,14 @@
 from q3_float_utils import obter_num_float
 from q2_int_utils import obter_num_inteiro
 
+#  No geral faltou compreender a questão e usar melhor funcoes para limpar o código.
+# Lógica confusa
+
 def main():
 
     print('>>>CALCULAR EMPRÉSTIMO<<<')
 
+    # obter float min
     renda_mensal = obter_num_float('Informe sua renda mensal(R$): ')
 
     if renda_mensal < 0:
@@ -12,15 +16,18 @@ def main():
         renda_mensal = obter_num_float('Informe sua renda mensal(R$): ')
     else:
         pass
+    # acima a validação deve ser feita numa função .. para ficar em loop até encontra rum valor adequado
 
     valor_emprestimo = obter_num_float('Informe o valor do empréstimo(R$): ')
     if valor_emprestimo < 1518.00 or valor_emprestimo > (renda_mensal*0.3):
+        # O limite de 30% é no valor da prestação e não no valor da renda e empréstimo
         print('Insira uma entrada válida')
         valor_emprestimo = obter_num_float('Informe o valor do empréstimo(R$): ')
     else:
         pass
 
     parcelas = obter_num_inteiro('Informe em quantas parcelas deseja dividir o empréstimo: ')
+    # usar funções obter inteiro na faixa.
     if parcelas <= 0 or parcelas > 24:
         print('Insira uma entrada válida')
         parcelas = obter_num_inteiro('Informe em quantos meses deseja dividir o empréstimo: ')
@@ -30,9 +37,11 @@ def main():
 
 
     valor_iof = calcular_iof(valor_emprestimo, parcelas)
+    # printar resultado no final.. lembra do Entrada/Proc/Saída
     print(f'Valor do IOF: R${valor_iof:.2f}')
 
     capital_inicial_juros = valor_emprestimo + valor_iof
+    # esse cálculo abaixo tá sem sentido.
     selic = 14.75 * valor_emprestimo
     juros = calcular_juros(capital_inicial_juros, selic, parcelas)
     print(f'Valor dos juros a pagar: R${juros:.2f}')
@@ -67,6 +76,8 @@ def calcular_juros(capital_inicial_juros, selic, parcelas):
         taxa = selic
     elif parcelas > 18:
         taxa = 1.30 * selic
+    
+    # calculou a taxa e não fez nada com ela.
 
     valor_juros = capital_inicial_juros * selic * parcelas
     return valor_juros

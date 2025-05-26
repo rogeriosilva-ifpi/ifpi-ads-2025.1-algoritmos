@@ -21,4 +21,5 @@ def main():
     print ("Tamanho do nome: ",T)
     return T
 
+# ficou super confuso o uso de main assim.
 ler_nome()

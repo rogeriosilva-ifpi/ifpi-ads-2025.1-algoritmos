@@ -1,5 +1,6 @@
 # Recebendo um número inteiro
 def obter_numero_inteiro(num):
+    # Não tá retornando sempre um inteiro válido. tá retornando texto
     try: 
         if num == int(num):
             return num

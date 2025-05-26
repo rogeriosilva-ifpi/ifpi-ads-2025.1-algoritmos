@@ -14,7 +14,7 @@ def calcular_talão(nome, consumo):
         print(f'-------------------------------------')
         print(f'TOTAL A PAGAR :  R$ 0')
         return
-    if consumo > 30 and consumo <=200:
+    if consumo > 30 and consumo <= 200:
         valor_tarifa= consumo*0.89
         tarifa_iluminacao = 0.03*valor_tarifa
         valor_parcial = valor_tarifa + tarifa_iluminacao

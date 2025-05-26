@@ -1,7 +1,10 @@
 import os
+# Nomear corretamente as questões de acordo com indicado.
 
 
 def receber_numero_inteiro():
+    # faltou retorno número
+    # E tbm um label, text a ser exibido
     try:
         numero = int(input('Digite um número inteiro: '))
     except ValueError:
@@ -14,6 +17,8 @@ def receber_numero_inteiro():
 
 
 def receber_numero_inteiro_positivo():
+    # faltou returnar o número
+    # faltou reusar a funcao base
     try:
         numero = int(input('Digite um número inteiro positivo: '))
         if numero < 0:
@@ -29,6 +34,7 @@ def receber_numero_inteiro_positivo():
 
 
 def receber_numero_inteiro_limitado_min():
+
     try:
         limite_inferior = int(input('Digite um valor mínimo: '))
         numero = int(input('Digite um número inteiro: '))

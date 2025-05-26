@@ -1,5 +1,5 @@
 
-
+# mesmos problemas da int utils
 def obter_num_float(label:str):
     return float(input(label))
 

@@ -2,6 +2,7 @@
 
 def main():
     renda_mensal = float(input('Insira sua renda mensal > '))
+    
     while True:
       valor_emprestimo = float(input('Insira o valor do empréstimo > '))
       if valor_emprestimo >= 1518:
@@ -9,6 +10,7 @@ def main():
       else:
           print('Empréstimo deve custar no mínimo 1 salário mínimo (R$ 1518)')
           input('Aperte ENTER para tentar novamente.')
+
     while True:
       prazo = int(input('Qual o prazo desejado? (meses) > '))
       if prazo <= 24 and prazo >= 2:

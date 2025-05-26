@@ -3,6 +3,7 @@ def obter_texto(label):
     return texto
 
 def obter_txt_min(label):
+    # faltou receber o parâmetro de limite mínimo
     tam_min = int(input('Infome o tamanho mínimo do texto: '))
     texto = input(label)
     tamn_texto = len(texto)
@@ -13,6 +14,7 @@ def obter_txt_min(label):
         return texto
     
 def obter_txt_max(label):
+    # idem.
     tam_min = int(input('Infome o tamanho máximo do texto: '))
     texto = input(label)
     tamn_texto = len(texto)
@@ -23,6 +25,7 @@ def obter_txt_max(label):
         return texto
     
 def obter_txt_xy(label:str):
+    # nome ruim.. faltou parametros
     numX = int(input('Informe um número para ser o limite mínimo: '))
     numY = int(input('Informe um número para ser o limte mínimo: '))
     texto = input(label)

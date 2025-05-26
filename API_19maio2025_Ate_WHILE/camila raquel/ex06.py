@@ -70,7 +70,7 @@ def controlarValores(qtdLetras):
 def main():
     nomeDoAnimal = obterTextoTamMin(7, 'Insira o nome do animal: ')
     qtdLetras = obterTamanhoNome(nomeDoAnimal)
-    print(f'-=-ANALISANDO VALORES-=-')
+    print(f'-=- ANALISANDO VALORES -=-')
     print(controlarValores(qtdLetras))    
     
     
