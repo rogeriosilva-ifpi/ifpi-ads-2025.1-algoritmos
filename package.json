@@ -1,0 +1,9 @@
+{
+  "name": "ifpi-ads-2025.1-algoritmos",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@rogeriosilva-ifpi.github.com:rogeriosilva-ifpi/ifpi-ads-2025.1-algoritmos.git",
+  "author": "Rogério Silva <rogerio410@gmail.com>",
+  "license": "MIT",
+  "type": "module"
+}

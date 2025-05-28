@@ -1,0 +1,36 @@
+Arguments: 
+  /Users/rogerio410/.nvm/versions/node/v22.11.0/bin/node /Users/rogerio410/.yarn/bin/yarn.js init
+
+PATH: 
+  /Users/rogerio410/.docker/bin:/opt/homebrew/Cellar/pyenv-virtualenv/1.2.3/shims:/Users/rogerio410/.pyenv/shims:/Users/rogerio410/.sdkman/candidates/java/current/bin:/Users/rogerio410/.yarn/bin:/Users/rogerio410/.config/yarn/global/node_modules/.bin:/Users/rogerio410/.local/share/zinit/polaris/bin:/Users/rogerio410/.nvm/versions/node/v22.11.0/bin:/Users/rogerio410/development/flutter/bin:/Users/rogerio410/Library/Android/sdk/platform-tools:/Users/rogerio410/Library/Android/sdk:/Users/rogerio410/bin:/usr/local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/Library/Apple/usr/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  22.11.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: canceled
+      at Interface.<anonymous> (/Users/rogerio410/.yarn/lib/cli.js:137150:13)
+      at Interface.emit (node:events:518:28)
+      at [_ttyWrite] [as _ttyWrite] (node:internal/readline/interface:1124:18)
+      at ReadStream.onkeypress (node:internal/readline/interface:263:20)
+      at ReadStream.emit (node:events:518:28)
+      at emitKeys (node:internal/readline/utils:370:14)
+      at emitKeys.next (<anonymous>)
+      at ReadStream.onData (node:internal/readline/emitKeypressEvents:64:36)
+      at ReadStream.emit (node:events:518:28)
+      at addChunk (node:internal/streams/readable:561:12)
+
+npm manifest: 
+  No manifest
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
