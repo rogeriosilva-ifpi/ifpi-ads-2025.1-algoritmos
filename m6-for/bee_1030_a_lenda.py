@@ -1,19 +1,21 @@
 def lenda():
-  casos = int(input('Casos: '))
+  casos = int(input())
 
   for i in range(1, casos + 1, 1):
-    entrada = input(f'Caso {i}: ')
+    entrada = input()
     pessoas = int(entrada.split()[0])
     k = int(entrada.split()[1])
 
     lista = list(range(1, pessoas + 1, 1))
     pos_atual = k - 1
     saltos = k
+    contador_vivos = pessoas
     
-    while contar_vivos(lista) > 1:
+    while contador_vivos > 1:
       if saltos == k:
         lista[pos_atual] = 0
         saltos = 0
+        contador_vivos -= 1
 
       pos_atual += 1
       if pos_atual >= len(lista):
@@ -26,26 +28,13 @@ def lenda():
       
       saltos += 1
 
-  mostrar_vivo(lista)
+    mostrar_vivo(lista, i)
 
 
-def contar_vivos(lista):
-  contador = 0
+def mostrar_vivo(lista, case):
   for item in lista:
     if item != 0:
-      contador += 1
-  
-  return contador
-
-
-def mostrar_vivo(lista):
-  if contar_vivos(lista) > 1:
-    print('Há mais de um vivo na lista')
-    return
-  
-  for item in lista:
-    if item != 0:
-      print(item)
+      print(f'Case {case}: {item}')
       return
 
 
