@@ -4,36 +4,67 @@ def main():
   menu = '''
   >>>> WordPLAY <<<<
   1 - Palavras com Tamanho N+
+  2 - Palavras sem Caracter Proibido
 
   0 - Sair
   >>>> '''
 
-  opcao = int(input(menu))
+  option = int(input(menu))
 
-  while opcao != 0:
-    if opcao == 1:
-      mostrar_palavras_por_tamanho()
+  while option != 0:
+    if option == 1:
+      show_words_by_size()
+    elif option == 2:
+      show_words_without_forbidden_char()
+
     input('>>> continue...')
-    opcao = int(input(menu))
+    option = int(input(menu))
 
-  print('Fim.')\
-  
+  print('Fim.')
 
-def mostrar_palavras_por_tamanho():
-  tamanho = int(input('Qual tamanho min das palavras: '))
-  arquivo = open('br-sem-acentos.txt')
-  contador = 0
-  contador_filtro = 0
-  for linha in arquivo:
-    palavra = linha.strip()
-    contador += 1
-    if len(palavra) >= tamanho:
-      contador_filtro += 1
-      print(palavra)
+
+def show_words_by_size():
+  size = int(input('Qual tamanho min das palavras: '))
+  file = open('br-sem-acentos.txt')
+  counter = 0
+  filter_counter = 0
+  for line in file:
+    word = line.strip()
+    counter += 1
+    if len(word) >= size:
+      filter_counter += 1
+      print(word)
   
   print('------------')
-  percentual = contador_filtro / contador * 100
-  print(f'Total/Filtro: {contador_filtro}/{contador} ({percentual:.1f}%)')
+  percentage = filter_counter / counter * 100
+  print(f'Total/Filtro: {filter_counter}/{counter} ({percentage:.3f}%)')
+
+
+def show_words_without_forbidden_char():
+  file = open('br-sem-acentos.txt')
+  forbidden = input('Qual é a letra proibida? ')
+  counter = 0
+  filter_counter = 0
+
+  for line in file:
+    word = line.strip()
+    counter += 1
+    if has_no_char_x(word, forbidden):
+      filter_counter += 1
+      print(word)
+
+  print('------------')
+  percentage = filter_counter / counter * 100
+  print(f'Total/Filtro: {filter_counter}/{counter} ({percentage:.3f}%)')
+
+
+
+def has_no_char_x(word, forbidden_char):
+  for char in word:
+    if char == forbidden_char:
+      return False
+  
+  return True
 
 
 main()
