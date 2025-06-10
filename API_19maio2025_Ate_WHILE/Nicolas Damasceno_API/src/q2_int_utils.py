@@ -1,23 +1,22 @@
 # Recebendo um número inteiro
-def obter_numero_inteiro(num):
+def obter_numero_inteiro(descricao):
     # Não tá retornando sempre um inteiro válido. tá retornando texto
+    valor = input(descricao)
     try: 
-        if num == int(num):
-            return num
-        else:
-            return 'Valor inválido'
+        num = int(valor)
+        return num
     except ValueError:
-        return 'Caractere inválido'
+        return obter_numero_inteiro(descricao)
 
 
 # Recebendo um número inteiro positivo
-def obter_numero_inteiro_positivo(num):
-    inteiro = obter_numero_inteiro(num)
-    if inteiro == num:
-        if num > 0:
-            return num
-        return 'Número negativo inválido'
-    return inteiro
+def obter_numero_inteiro_positivo(descricao):
+    numero = obter_numero_inteiro(descricao)
+
+    while numero <= 0:
+        numero = obter_numero_inteiro(descricao)
+
+    return numero
     
 
 # Recebendo de no mínimo X
