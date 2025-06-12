@@ -56,5 +56,39 @@ def to_lower(text):
   return new_text
 
 
+def to_upper(text):
+  new_text = ''
+
+  for letter in text:
+    if is_lower_letter(letter):
+      new_text = new_text + chr(ord(letter) - 32)
+    else:
+      new_text = new_text + letter
+  
+  return new_text
+
+
 def is_upper_letter(char):
   return ord(char) >= 65 and ord(char) <= 90
+
+
+def is_lower_letter(char):
+  return ord(char) >= 97 and ord(char) <= 122
+
+
+def is_letter(char):
+  return is_lower_letter(char) or is_upper_letter(char)
+
+
+def is_number(char):
+  return ord(char) >= 48 and ord(char) <= 57
+
+
+def is_vogal(char):
+  vogals = 'AEIOUaeiou'
+
+  for vogal in vogals:
+    if char == vogal:
+      return True
+  
+  return False
